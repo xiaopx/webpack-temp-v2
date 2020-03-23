@@ -1,0 +1,165 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, form, legend, input, button,
+textarea, p,th,td,ul, menu, dir{margin:0;padding:0;font-size:100%;/*background:transparent;*/}
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:normal;}
+fieldset, img{border:none;}
+img{display:block;width:100%;-webkit-touch-callout: none;}
+canvas{display: block;}
+ol, ul,li{list-style:none outside none;}
+table{border-collapse:collapse;border-spacing:0;}
+input, select{vertical-align:middle;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+abbr[title], dfn[title] {border-bottom:1px dotted;cursor:help;}
+sub,sup{font-size:70%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+button, input, textarea{-webkit-user-modify: read-write-plaintext-only;}
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+html{-webkit-text-size-adjust:none;}
+body {
+  background-color: #fff;
+  color: #070707;
+  font-family: Arial, "微软雅黑", Verdana, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a{text-decoration:none;color:#fff;transition: all 0.25s ease;}
+.clearfix:after {content:"\20"; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix{display:inline-block;}
+audio{display: none;}
+html {
+	font-size: 16px;
+	overflow-y: scroll;
+}
+@mixin pageTitleRest{
+  font-weight: 400 !important;
+  line-height: 1.4;
+}
+@font-face {
+  /*english title font*/
+  font-family: 'BMWTypeNextLatin-Light';
+  src: url('../fonts/bmw_next_light.eot');
+  src: url('../fonts/bmw_next_light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/bmw_next_light.woff2') format('woff2'),
+  url('../fonts/bmw_next_light.woff') format('woff'),
+  url('../fonts/bmw_next_light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /*english copy font*/
+  font-family: 'BMWTypeNextLatin-Regular';
+  src: url('../fonts/bmw_next_regular.eot');
+  src: url('../fonts/bmw_next_regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/bmw_next_regular.woff2') format('woff2'),
+    url('../fonts/bmw_next_regular.woff') format('woff'),
+    url('../fonts/bmw_next_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /*english bold font*/
+  font-family: 'BMWTypeNextLatin-Bold';
+  src: url('../fonts/bmw_next_bold.eot');
+  src: url('../fonts/bmw_next_bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/bmw_next_bold.woff2') format('woff2'),
+    url('../fonts/bmw_next_bold.woff') format('woff'),
+    url('../fonts/bmw_next_bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (min-width: 375px) {
+	html {
+		font-size: calc(100% + 2 * (100vw - 375px) / 39);
+		font-size: calc(16px + 2 * (100vw - 375px) / 39);
+	}
+}
+
+@media screen and (min-width: 414px) {
+	html {
+		font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+		font-size: calc(18px + 4 * (100vw - 414px) / 586);
+	}
+}
+
+@media screen and (min-width: 600px) {
+	html {
+		font-size: calc(125% + 4 * (100vw - 600px) / 400);
+		font-size: calc(20px + 4 * (100vw - 600px) / 400);
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	html {
+		font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+		font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
+	}
+}
+
+
+.font-bmw-title{
+  font-family: "BMWTypeNextLatin-Light","Microsoft Yahei","Arial","Helvetica","Noto Sans CJK SC","Noto Sans",sans-serif !important;
+}
+.font-bmw-copy {
+  font-family: "BMWTypeNextLatin-Regular",
+  "Microsoft Yahei",
+  "Arial",
+  "Helvetica",
+  "Noto Sans CJK SC",
+  "Noto Sans",
+  sans-serif !important;
+}
+.font-bmw-bold {
+  font-family: "BMWTypeNextLatin-Bold",
+    "Microsoft Yahei",
+    "Arial",
+    "Helvetica",
+    "Noto Sans CJK SC",
+    "Noto Sans",
+    sans-serif !important;
+}
+
+#toploader {
+  background: rgba(255,255,255,1) none repeat scroll 0 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+}
+#toploader .loadingtext {
+  color: #000;
+  font-size: 14px;
+  height: 90px;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 90px;
+}
+#toploader .loadingtext span {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+}
+
+#bmwCampaign{
+  h1,h2,h3,h4,h5,h6{
+    @include pageTitleRest;
+  }
+}
+.icon-close-x::before {
+  color: #262626 !important;
+}
