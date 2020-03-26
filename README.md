@@ -25,9 +25,9 @@ src/media  放置视频音频文件，文件夹下的东西会被copy 到 打包
 src/js/lib 下的JS 文件是可以不经过打包处理，直接在页面中引用的。
 <script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
 
-5. 
+6. 
 把资源都放进去之后，先执行 npm run build 把静态资源生成到打包文件夹。
 
-6.
+7.
 npm run start 打开热更新服务器。CTRL + C 退出热更新。
 
