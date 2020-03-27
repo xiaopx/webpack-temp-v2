@@ -21,7 +21,7 @@ module.exports={
       chunks: ['index'],
       chunksSortMode: 'manual',
       minify: {
-        removeComments: true, //删除注释
+        //removeComments: true, //删除注释
         removeEmptyAttributes: true, //删除空属性
         removeRedundantAttributes: true, //删除多余的属性
        }
@@ -33,7 +33,7 @@ module.exports={
        chunks: ['index'],
        chunksSortMode: 'manual',
        minify: {
-         removeComments: true, //删除注释
+         //removeComments: true, //删除注释
          removeEmptyAttributes: true, //删除空属性
          removeRedundantAttributes: true, //删除多余的属性
        }
